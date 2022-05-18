@@ -2,20 +2,12 @@
 
 #create temporary envirronemtnal variables for 
 
-VERSION="0.0.4"
-STATUS = "stable"
-KICAD_VERSION = "6.0",
-RELEASE_URL_BASE = "https://github.com/osholt/kicad-test-plugin/releases/download/v"
-RELEASE_ARCHIVE_NAME = "Archive.zip"
+export VERSIONVERSION="0.0.4"
+export STATUSSTATUS="stable"
+export KICAD_VERSIONKICAD_VERSION="6.0",
+export RELEASE_URL_BASERELEASE_URL_BASE="https://github.com/osholt/kicad-test-plugin/releases/download/v"
+export RELEASE_ARCHIVE_NAME="Archive.zip"
 prerelease = 1
-
-
-export VERSION
-export STATUS
-export KICAD_VERSION
-export RELEASE_URL_BASE
-export RELEASE_ARCHIVE_NAME
-
 
 #Create archive of 
 cd plugins
