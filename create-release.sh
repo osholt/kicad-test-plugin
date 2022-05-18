@@ -9,6 +9,8 @@ RELEASE_URL_BASE = "https://github.com/osholt/kicad-test-plugin/releases/downloa
 RELEASE_ARCHIVE_NAME = "Archive.zip"
 prerelease = 1
 
+echo $VERSION
+
 export VERSION
 export STATUS
 export KICAD_VERSION
@@ -25,6 +27,7 @@ python metadata-update.py
 git commit -a -m "Automated commit before release"
 git push
 
+echo $VERSION
 
 if [[ $prerelease -eq 1 ]]
 then
