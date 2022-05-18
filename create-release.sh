@@ -2,14 +2,13 @@
 
 #create temporary envirronemtnal variables for 
 
-VERSION = "0.0.4"
+VERSION="0.0.4"
 STATUS = "stable"
 KICAD_VERSION = "6.0",
 RELEASE_URL_BASE = "https://github.com/osholt/kicad-test-plugin/releases/download/v"
 RELEASE_ARCHIVE_NAME = "Archive.zip"
 prerelease = 1
 
-echo $VERSION
 
 export VERSION
 export STATUS
