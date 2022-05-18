@@ -33,10 +33,9 @@
             "version": "0.0.1",
             "status": "stable",
             "kicad_version": "6.0",
-			"download_sha256": "50d5d0e05d37a25624df30666b00b9149d9484ed99a3a46b4315d9185ebfd340",
-			"download_size": 6487,
-			"download_url": "https://clearlywrong.org/400.zip",
-			"install_size": 6275
+            "download_size": 3762,
+            "download_url": "https://github.com/osholt/kicad-test-plugin/releases/download/v0.0.1/Archive.zip",
+            "install_size": 3387
         }
     ]
 }
