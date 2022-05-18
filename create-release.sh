@@ -2,13 +2,19 @@
 
 #create temporary envirronemtnal variables for 
 
-export VERSION = "0.0.4"
-export STATUS = "stable"
-export KICAD_VERSION = "6.0",
-export RELEASE_URL_BASE = "https://github.com/osholt/kicad-test-plugin/releases/download/v"
-export RELEASE_ARCHIVE_NAME = "Archive.zip"
-
+VERSION = "0.0.4"
+STATUS = "stable"
+KICAD_VERSION = "6.0",
+RELEASE_URL_BASE = "https://github.com/osholt/kicad-test-plugin/releases/download/v"
+RELEASE_ARCHIVE_NAME = "Archive.zip"
 prerelease = 1
+
+export VERSION
+export STATUS
+export KICAD_VERSION
+export RELEASE_URL_BASE
+export RELEASE_ARCHIVE_NAME
+
 
 #Create archive of 
 cd plugins
@@ -19,7 +25,6 @@ python metadata-update.py
 git commit -a -m "Automated commit before release"
 git push
 
-echo "v$VERSION"
 
 if [[ $prerelease -eq 1 ]]
 then
