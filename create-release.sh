@@ -2,11 +2,11 @@
 
 #create temporary envirronemtnal variables for 
 
-VERSIONVERSION="0.0.4"
-STATUSSTATUS="stable"
-KICAD_VERSIONKICAD_VERSION="6.0",
-RELEASE_URL_BASERELEASE_URL_BASE="https://github.com/osholt/kicad-test-plugin/releases/download/v"
-RELEASE_ARCHIVE_NAME="Archive.zip"
+export VERSION="0.0.4"
+export STATUS="stable"
+export KICAD_VERSION="6.0",
+export RELEASE_URL_BASE="https://github.com/osholt/kicad-test-plugin/releases/download/v"
+export RELEASE_ARCHIVE_NAME="Archive.zip"
 prerelease = 1
 
 
