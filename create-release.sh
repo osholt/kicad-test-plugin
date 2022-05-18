@@ -21,8 +21,8 @@ git push
 
 if [[ $prerelease -eq 1 ]]
 then
-    gh release create v$VERSION $RELEASE_ARCHIVE_NAME -p -t "Release $VERSION"
+    gh release create v$VERSION $RELEASE_ARCHIVE_NAME -p -t "Release $VERSION" -n "This was auto-generated."
 else
-    gh release create v$VERSION $RELEASE_ARCHIVE_NAME -t "Release $VERSION"
+    gh release create v$VERSION $RELEASE_ARCHIVE_NAME -t "Release $VERSION" -n "This was auto-generated."
 fi
 
