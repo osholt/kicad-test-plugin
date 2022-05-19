@@ -1,5 +1,6 @@
 import pcbnew
 import os
+import wx
 
 class HelloWorldAction(pcbnew.ActionPlugin):
     def defaults(self):
@@ -11,4 +12,6 @@ class HelloWorldAction(pcbnew.ActionPlugin):
 
     def Run(self):
         # The entry function of the plugin that is executed on user action
-        print("Hello World")
+        caption = self.name
+        message = "Hello World!"
+        wx.MessageBox(message, caption, wx.OK | wx.ICON_EXCLAMATION)
