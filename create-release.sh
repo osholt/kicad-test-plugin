@@ -7,7 +7,7 @@ export STATUS="stable"
 export KICAD_VERSION="6.0",
 export RELEASE_URL_BASE="https://github.com/osholt/kicad-test-plugin/releases/download/v"
 export RELEASE_ARCHIVE_NAME="Archive.zip"
-prerelease = 1
+prerelease=1
 
 
 
