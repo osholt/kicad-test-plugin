@@ -13,9 +13,7 @@ prerelease=1
 
 
 #Create archive of 
-cd plugins
-zip -r ../Archive.zip . -x ".*" -x "__MACOSX" > /dev/null
-cd ..
+zip -r Archive.zip . -x ".*" -x "__MACOSX" -x "Archiv*" -x "metadata-*" -x "LIC*" -x "create*" > /dev/null
 python3 metadata-update.py
 
 git commit -a -m "Automated commit before release" --quiet
