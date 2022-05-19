@@ -4,7 +4,7 @@
 
 export VERSION="0.0.2"
 export STATUS="stable"
-export KICAD_VERSION="6.0",
+export KICAD_VERSION="6.0"
 export RELEASE_URL_BASE="https://github.com/osholt/kicad-test-plugin/releases/download/v"
 export RELEASE_ARCHIVE_NAME="Archive.zip"
 export UNIQUE_IDENTIFIER="com.github.osholt.test"
@@ -25,8 +25,10 @@ git push --quiet
 
 if [[ $prerelease -eq 1 ]]
 then
+    gh release delete "v$VERSION" --yes
     gh release create "v$VERSION" $RELEASE_ARCHIVE_NAME -t "Release $VERSION" -n "This was auto-generated." -p 
 else
+    gh release delete "v$VERSION" --yes
     gh release create "v$VERSION" $RELEASE_ARCHIVE_NAME -t "Release $VERSION" -n "This was auto-generated."
 fi
 
