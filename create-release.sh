@@ -38,7 +38,7 @@ cd metadata
 git commit -a -m "Automated update" --quiet
 git push --quiet
 cd ..
-rm -rv metadata
+rm -rvf metadata
 
 ##update main repo
 #git clone https://github.com/osholt/kicad-plugin-repo plugin_repo --quiet
