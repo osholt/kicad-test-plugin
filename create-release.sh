@@ -33,7 +33,7 @@ fi
 #pull metadata repo and update that
 
 git clone https://github.com/osholt/kicad-plugin-repo-metadata metadata --quiet
-python3 metadate-repo-update.py
+python3 metadata-repo-update.py
 cd metadata
 git commit -a -m "Automated update" --quiet
 git push --quiet
