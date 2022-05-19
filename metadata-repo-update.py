@@ -69,7 +69,7 @@ metadata = load_json_file("metadata/packages/"+UNIQUE_IDENTIFIER+"/metadata.json
 numberOfVersions = len(metadata["versions"])
 entryToUpdate = 0
 #number of versions in json already
-print(numberOfVersions)
+#print(numberOfVersions)
 
 #uncomment if extra entries are allowed
 for x in metadata["versions"]:
@@ -81,7 +81,7 @@ for x in metadata["versions"]:
         entryToUpdate = entryToUpdate+1
 
 #index to update
-print(entryToUpdate) 
+#print(entryToUpdate) 
 
 #print(metadata["versions"])
 #add a new version entry if needed
@@ -90,7 +90,7 @@ if entryToUpdate >= numberOfVersions:
 
 #print the new number of versions in the json
 numberOfVersions = len(metadata["versions"])
-print(numberOfVersions)
+#print(numberOfVersions)
 
 #update the json if needed
 y = metadata["versions"][entryToUpdate]
