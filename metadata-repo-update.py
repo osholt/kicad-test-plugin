@@ -83,7 +83,7 @@ for x in metadata["versions"]:
 #index to update
 print(entryToUpdate) 
 
-print(metadata["versions"])
+#print(metadata["versions"])
 #add a new version entry if needed
 if entryToUpdate >= numberOfVersions:
     metadata["versions"].append({"version":"test5"})
