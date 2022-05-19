@@ -15,7 +15,7 @@ prerelease = 1
 cd plugins
 zip -r ../Archive.zip . -x ".*" -x "__MACOSX"
 cd ..
-python metadata-update.py
+python3 metadata-update.py
 
 git commit -a -m "Automated commit before release" --quiet
 git push --quiet
