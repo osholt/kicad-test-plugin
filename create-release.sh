@@ -44,4 +44,5 @@ rm -rvf metadata > /dev/null
 git clone https://github.com/osholt/kicad-plugin-repo plugin_repo --quiet
 cd plugin_repo
 ./ci/build.sh
+cd ..
 rm -rv plugin_repo
