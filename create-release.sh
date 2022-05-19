@@ -8,6 +8,9 @@ export KICAD_VERSION="6.0"
 export RELEASE_URL_BASE="https://github.com/osholt/kicad-test-plugin/releases/download/v"
 export RELEASE_ARCHIVE_NAME="Archive.zip"
 export UNIQUE_IDENTIFIER="com.github.osholt.test"
+export METADATA_REPO="https://github.com/osholt/kicad-plugin-repo-metadata"
+export REPO="https://github.com/osholt/kicad-plugin-repo"
+
 prerelease=1
 
 
@@ -32,7 +35,7 @@ fi
 
 #pull metadata repo and update that
 
-git clone https://github.com/osholt/kicad-plugin-repo-metadata metadata --quiet
+git clone $METADATA_REPO metadata --quiet
 python3 metadata-repo-update.py
 cd metadata
 git commit -a -m "Automated update" --quiet
@@ -41,7 +44,7 @@ cd ..
 rm -rvf metadata > /dev/null
 
 #update main repo
-git clone https://github.com/osholt/kicad-plugin-repo plugin_repo --quiet
+git clone $REPO plugin_repo --quiet
 cd plugin_repo
 ./ci/build.sh
 cd ..
