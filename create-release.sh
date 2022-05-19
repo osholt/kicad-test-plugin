@@ -14,7 +14,7 @@ prerelease=1
 
 #Create archive of 
 cd plugins
-zip -r ../Archive.zip . -x ".*" -x "__MACOSX"
+zip -r ../Archive.zip . -x ".*" -x "__MACOSX" > /dev/null
 cd ..
 python3 metadata-update.py
 
@@ -38,7 +38,7 @@ cd metadata
 git commit -a -m "Automated update" --quiet
 git push --quiet
 cd ..
-rm -rvf metadata
+rm -rvf metadata > /dev/null
 
 ##update main repo
 #git clone https://github.com/osholt/kicad-plugin-repo plugin_repo --quiet
