@@ -7,6 +7,7 @@ export STATUS="stable"
 export KICAD_VERSION="6.0",
 export RELEASE_URL_BASE="https://github.com/osholt/kicad-test-plugin/releases/download/v"
 export RELEASE_ARCHIVE_NAME="Archive.zip"
+export UNIQUE_IDENTIFIER="com.github.osholt.test"
 prerelease=1
 
 
@@ -28,3 +29,19 @@ then
 else
     gh release create "v$VERSION" $RELEASE_ARCHIVE_NAME -t "Release $VERSION" -n "This was auto-generated."
 fi
+
+#pull metadata repo and update that
+
+git clone https://github.com/osholt/kicad-plugin-repo-metadata metadata --quiet
+python3 metadate-repo-update.py
+cd metadata
+git commit -a -m "Automated update" --quiet
+git push --quiet
+cd ..
+rm -rv metadata
+
+##update main repo
+#git clone https://github.com/osholt/kicad-plugin-repo plugin_repo --quiet
+#cd plugin_repo
+#./ci/build.sh
+#rm -rv plugin_repo
