@@ -20,7 +20,7 @@ python metadata-update.py
 git commit -a -m "Automated commit before release"
 git push
 
-echo $VERSION
+#echo $VERSION
 
 if [[ $prerelease -eq 1 ]]
 then
@@ -29,3 +29,4 @@ else
     gh release create "v$VERSION" $RELEASE_ARCHIVE_NAME -t "Release $VERSION" -n "This was auto-generated."
 fi
 
+python metadata-update.py
