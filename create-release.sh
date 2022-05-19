@@ -2,7 +2,7 @@
 
 #create temporary envirronemtnal variables for 
 
-export VERSION="0.0.5"
+export VERSION="0.0.2"
 export STATUS="stable"
 export KICAD_VERSION="6.0",
 export RELEASE_URL_BASE="https://github.com/osholt/kicad-test-plugin/releases/download/v"
@@ -38,10 +38,10 @@ cd metadata
 git commit -a -m "Automated update" --quiet
 git push --quiet
 cd ..
-#rm -rvf metadata > /dev/null
+rm -rvf metadata > /dev/null
 
-##update main repo
-#git clone https://github.com/osholt/kicad-plugin-repo plugin_repo --quiet
-#cd plugin_repo
-#./ci/build.sh
-#rm -rv plugin_repo
+#update main repo
+git clone https://github.com/osholt/kicad-plugin-repo plugin_repo --quiet
+cd plugin_repo
+./ci/build.sh
+rm -rv plugin_repo
